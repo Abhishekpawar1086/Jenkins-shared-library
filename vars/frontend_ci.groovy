@@ -28,7 +28,7 @@ pipeline {
 //clone your repo from git to your jenkins workspace you need to create private token for git and use that token inside jenkins crediantial        
           stage("git-chekckout") {
               steps {
-                git branch: 'main', credentialsId: 'Jenkins-token', url: 'https://github.com/Abhishekpawar1086/Frontend-webapp.git'
+                git branch: 'main', credentialsId: 'git-hubtoken', url: 'https://github.com/Abhishekpawar1086/Frontend-webapp.git'
               }  
             }
 //install all the dependencys using pakage.json file to run this webapplication
