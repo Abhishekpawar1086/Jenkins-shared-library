@@ -13,7 +13,7 @@ pipeline {
     GAR_REGISTRY = 'us-central1-docker.pkg.dev'
     PROJECT_ID = 'final-project-453412'
     FOLDER_NAME = 'docker-images'
-    //IMAGE_NAME = 'frontend-webapp'
+    //IMAGE_NAME = 'frontend-webapp' we commented this env variable because every project have this value diffrent for that we added ${config.IMAGE_NAME} to take values from the other jenkins pipeline
     IMAGE_TAG = "${GAR_REGISTRY}/${PROJECT_ID}/${FOLDER_NAME}/${config.IMAGE_NAME}:${BUILD_NUMBER}"
     //Image tag aloowes you to define the tag of the image and to push the image in the GAR regestry
     // :${BUILD_NUMBER}" alows you to specify the tag for your image 
